@@ -26,7 +26,7 @@ public class FilterTaskAuth extends OncePerRequestFilter {
 
     var servletPath = request.getServletPath();
 
-    if (servletPath.equals("/tasks/")) {
+    if (servletPath.startsWith("/tasks/")) {
       // get authentication of the user
       var authorization = request.getHeader("Authorization");
       // get only hash password of the user
@@ -45,7 +45,7 @@ public class FilterTaskAuth extends OncePerRequestFilter {
       } else {
         var passwordVerify = BCrypt.verifyer().verify(password.toCharArray(), validUser.getPassword());
         if (passwordVerify.verified) {
-          // segue o fluxo
+          // set id of the user in the request
           request.setAttribute("idUser", validUser.getId());
           filterChain.doFilter(request, response);
 

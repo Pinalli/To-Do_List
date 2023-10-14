@@ -1,6 +1,7 @@
 package br.com.pinalli.todolist.task;
 
 import java.time.LocalDateTime;
+
 import java.util.UUID;
 
 import org.hibernate.annotations.CreationTimestamp;
