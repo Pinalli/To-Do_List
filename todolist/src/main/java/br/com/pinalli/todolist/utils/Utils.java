@@ -8,6 +8,11 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeanWrapper;
 import org.springframework.beans.BeanWrapperImpl;
 
+/**
+ * @author pinalli
+ * @version 1.0
+ */
+
 public class Utils {
 
     public static void copyNonNullProperties(Object src, Object target) {

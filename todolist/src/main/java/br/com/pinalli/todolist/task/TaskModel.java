@@ -12,6 +12,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.Data;
 
+/**
+ * @author pinalli
+ * @version 1.0
+ */
+
 @Data
 @Entity(name = "tb_tasks")
 public class TaskModel {
